@@ -1,0 +1,30 @@
+{
+	"name": "homebridge-comed-hourlybilling",
+	"version": "0.0.4",
+	"description": "A Homebridge plugin to pull ComEd Hourly Billing data into HomeKit as a light sensor accessory.",
+	"author": "ecoen66",
+	"license": "MIT",
+	"main": "index.js",
+	"keywords": [
+		"homebridge-plugin",
+		"ComEd",
+		"Hourly",
+		"Billing"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/ecoen66/homebridge-comed-hourlybilling.git"
+	},
+	"bugs": {
+		"url": "http://github.com/ecoen66/homebridge-comed-hourlybilling/issues"
+	},
+	"dependencies": {
+		"axios": "^0.19.2",
+		"axios-cache-adapter": "^2.5.0"
+	},
+	"devDependencies": {},
+	"engines": {
+		"homebridge": ">=0.2.0",
+		"node": ">=0.12.0"
+	}
+}

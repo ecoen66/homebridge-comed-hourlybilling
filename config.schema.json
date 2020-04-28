@@ -1,0 +1,24 @@
+{
+	"pluginAlias": "ComEd Hourly Billing",
+	"pluginType": "accessory",
+	"schema": {
+		"name": {
+			"title": "Name",
+			"type": "string",
+			"required": true,
+			"default": "ComEd Rate"
+		},
+		"manufacturer": {
+			"title": "Manufacturer",
+			"type": "string",
+			"required": false,
+			"default": "ComEd"
+		},
+		"model": {
+			"title": "Model",
+			"type": "string",
+			"required": false,
+			"default": "Hourly Billing"
+		}
+	}
+}
