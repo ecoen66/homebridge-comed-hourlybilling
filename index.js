@@ -34,7 +34,7 @@ const api = axios.create({
  */
 const getHourlyData = async() => {
 	try {
-	    return await api.get('https://hourlypricing.comed.com/api?type=currenthouraverage'')
+	    return await api.get('https://hourlypricing.comed.com/api?type=currenthouraverage')
 	} catch (error) {
 	    console.error(error)
 	}
@@ -54,12 +54,12 @@ const getHourlyValue = async (log) => {
 	const hourlyData = await getHourlyData()
 
 	if(hourlyData) {
-		log.info('Data from API', hourlyData.price);
-		if (hourlyData.price == null) {
+		log.info('Data from API', hourlyData.data[0].price);
+		if (hourlyData.data[0].price == null) {
 			return 0
 		} else {
 			// Return positive value
-			return Math.abs(Math.round(hourlyData.price, 1))
+			return Math.abs(hourlyData.data[0].price, 1)
 		}
 	} else {
 		// No response hourlyData return 0
