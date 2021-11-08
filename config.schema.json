@@ -19,6 +19,13 @@
 			"type": "string",
 			"required": false,
 			"default": "Hourly Billing"
+		},
+		"refreshInterval": {
+			"title": "Refresh Interval",
+			"type": "integer",
+			"required": false,
+			"description": "Specifies the number of minutes between ComEd polls and updates. Default is 15."
+
 		}
 	}
 }

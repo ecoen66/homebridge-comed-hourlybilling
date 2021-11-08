@@ -39,7 +39,8 @@ Example accessory config (needs to be added to the homebridge config.json):
 
 Field           			| Description
 ----------------------------|------------
-**accessory**   			| (required) Must always be "ComEd Hourly Billing".
-**name**					| (required) The name you want to use for for the power level widget.
+**accessory**         | (required) Must always be "ComEd Hourly Billing".
+**name**              | (required) The name you want to use for for the power level widget.
 **manufacturer**			| (optional) This shows up in the homekit accessory Characteristics.
-**model**					| (optional) This shows up in the homekit accessory Characteristics.
+**model**             | (optional) This shows up in the homekit accessory Characteristics.
+**refreshInterval**   | (optional) The refresh interval in minutes for polling ComEd.
