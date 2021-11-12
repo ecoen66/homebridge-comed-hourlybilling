@@ -4,7 +4,7 @@ const api = axios.create({})
 
 var Service, Characteristic;
 
-const DEF_MIN_LUX = 0,
+const DEF_MIN_LUX = 0.0001,
       DEF_MAX_LUX = 10000;
 
 const interval = 15 // Minutes
@@ -53,14 +53,15 @@ class HourlyBilling {
 			if(hourlyData) {
 				this.log.info('Data from API', hourlyData.data[0].price);
 				if (hourlyData.data[0].price == null) {
-					this.service.getCharacteristic(Characteristic.CurrentAmbientLightLevel).updateValue(0)
+					// No price in hourlyData, return minimum allowed value
+					this.service.getCharacteristic(Characteristic.CurrentAmbientLightLevel).updateValue(DEF_MIN_LUX)
 					} else {
 					// Return positive value
 					this.service.getCharacteristic(Characteristic.CurrentAmbientLightLevel).updateValue( Math.abs(hourlyData.data[0].price, 1))
 				}
 			} else {
-				// No response hourlyData return 0
-				this.service.getCharacteristic(Characteristic.CurrentAmbientLightLevel).updateValue(0)
+				// No response hourlyData, return minimum allowed value
+				this.service.getCharacteristic(Characteristic.CurrentAmbientLightLevel).updateValue(DEF_MIN_LUX)
 			}
 		} catch (error) {
 				console.error(error)

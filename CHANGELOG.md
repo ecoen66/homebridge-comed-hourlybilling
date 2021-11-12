@@ -1,6 +1,12 @@
 # Changelog
 
 
+## 0.0.7 (2021-11-12)
+
+#### Changes
+
+- Updated minimum returned LUX value from 0 to 0.0001.
+
 ## 0.0.6 (2021-11-08)
 
 #### Changes
