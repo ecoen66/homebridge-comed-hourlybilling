@@ -1,3 +1,8 @@
+# THIS CODE IS NO LONGER BEING DEVELOPED/SUPPORTED BY THE AUTHOR
+I have not used homebridge for a few years now, and no longer have a ComEd account.
+
+
+
 # homebridge-comed-hourlybilling
 A [ComEd](https://www.comed.com/Pages/default.aspx) Hourly Billing plugin for
 [Homebridge](https://github.com/nfarina/homebridge).  This creates a Light Sensor in homekit,
